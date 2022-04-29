@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="663.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo4.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="663.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo4.Scene1Controller">
    <children>
       <Label layoutX="14.0" layoutY="67.0" prefHeight="27.0" prefWidth="195.0" text="Student Information" textAlignment="CENTER">
          <font>
@@ -15,28 +15,23 @@
       <AnchorPane layoutX="3.0" layoutY="89.0" prefHeight="123.0" prefWidth="644.0">
          <children>
             <Label layoutX="14.0" layoutY="13.0" text="First Name *" />
-            <TextField layoutX="95.0" layoutY="9.0" prefHeight="0.0" prefWidth="148.0" />
+            <TextField fx:id="firstName" layoutX="95.0" layoutY="9.0" prefHeight="0.0" prefWidth="148.0" />
             <Label layoutX="14.0" layoutY="46.0" text="Middle Name " />
-            <TextField layoutX="95.0" layoutY="42.0" prefHeight="0.0" prefWidth="148.0" />
+            <TextField fx:id="middleName" layoutX="95.0" layoutY="42.0" prefHeight="0.0" prefWidth="148.0" />
             <Label layoutX="14.0" layoutY="80.0" text="Last Name *" />
-            <TextField layoutX="95.0" layoutY="76.0" prefHeight="0.0" prefWidth="148.0" />
+            <TextField fx:id="lastName" layoutX="95.0" layoutY="76.0" prefHeight="0.0" prefWidth="148.0" />
             <Label layoutX="260.0" layoutY="13.0" text="SSN*" />
-            <TextField layoutX="297.0" layoutY="9.0" prefHeight="25.0" prefWidth="127.0" />
+            <TextField fx:id="SSN" layoutX="297.0" layoutY="9.0" prefHeight="25.0" prefWidth="127.0" />
             <Label layoutX="440.0" layoutY="13.0" text="ConfirmSSN*" />
-            <TextField layoutX="519.0" layoutY="9.0" prefHeight="25.0" prefWidth="127.0" />
+            <TextField fx:id="confirmSSN" layoutX="519.0" layoutY="9.0" prefHeight="25.0" prefWidth="127.0" />
             <Label layoutX="260.0" layoutY="46.0" text="CUNYID*" />
-            <TextField layoutX="338.0" layoutY="42.0" prefHeight="25.0" prefWidth="127.0" />
+            <TextField fx:id="CUNYID" layoutX="338.0" layoutY="42.0" prefHeight="25.0" prefWidth="127.0" />
             <Label layoutX="260.0" layoutY="80.0" text="ConfirmCUNYID*" />
-            <TextField layoutX="361.0" layoutY="76.0" prefHeight="25.0" prefWidth="127.0" />
+            <TextField fx:id="confirmCUNYID" layoutX="361.0" layoutY="76.0" prefHeight="25.0" prefWidth="127.0" />
             <Label layoutX="14.0" layoutY="110.0" text="Gender*" />
-            <MenuButton layoutX="95.0" layoutY="106.0" mnemonicParsing="false" text="Selecet">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Action 1" />
-                  <MenuItem mnemonicParsing="false" text="Action 2" />
-               </items>
-            </MenuButton>
             <Label layoutX="260.0" layoutY="110.0" text="Date of Birth *" />
-            <DatePicker layoutX="344.0" layoutY="106.0" />
+            <DatePicker fx:id="DOB" layoutX="344.0" layoutY="106.0" />
+            <ComboBox fx:id="genderBox" layoutX="94.0" layoutY="105.0" onMouseClicked="#genderClick" prefWidth="150.0" promptText="Select" />
          </children>
       </AnchorPane>
       <Label layoutX="14.0" layoutY="46.0" text="* questions are required" />
@@ -45,15 +40,15 @@
       <AnchorPane layoutX="100.0" layoutY="234.0" prefHeight="83.0" prefWidth="550.0">
          <children>
             <Label layoutX="8.0" layoutY="5.0" text="Street" />
-            <TextField layoutX="47.0" layoutY="2.0" prefHeight="17.0" prefWidth="256.0" />
+            <TextField fx:id="addStreet" layoutX="47.0" layoutY="2.0" prefHeight="17.0" prefWidth="256.0" />
             <Label layoutX="8.0" layoutY="33.0" text="City" />
-            <TextField layoutX="47.0" layoutY="30.0" prefHeight="17.0" prefWidth="135.0" />
+            <TextField fx:id="addCity" layoutX="47.0" layoutY="30.0" prefHeight="17.0" prefWidth="135.0" />
             <Label layoutX="194.0" layoutY="33.0" text="State" />
-            <ComboBox layoutX="228.0" layoutY="30.0" prefWidth="150.0" />
+            <ComboBox fx:id="addState" layoutX="228.0" layoutY="30.0" onMouseClicked="#stateClick" prefWidth="150.0" promptText="Select" />
             <Label layoutX="317.0" layoutY="6.0" text="Apt" />
-            <TextField layoutX="347.0" layoutY="2.0" prefHeight="17.0" prefWidth="91.0" />
+            <TextField fx:id="addApt" layoutX="347.0" layoutY="2.0" prefHeight="17.0" prefWidth="91.0" />
             <Label layoutX="393.0" layoutY="34.0" text="Zip" />
-            <TextField layoutX="417.0" layoutY="30.0" prefHeight="25.0" prefWidth="116.0" />
+            <TextField fx:id="addZip" layoutX="417.0" layoutY="30.0" prefHeight="25.0" prefWidth="116.0" />
          </children>
       </AnchorPane>
       <Label layoutX="14.0" layoutY="18.0" text="Queens College Non-Degree Application Form">
@@ -64,34 +59,38 @@
       <AnchorPane layoutX="100.0" layoutY="331.0" prefHeight="83.0" prefWidth="550.0">
          <children>
             <Label layoutX="8.0" layoutY="5.0" text="Street" />
-            <TextField layoutX="47.0" layoutY="2.0" prefHeight="17.0" prefWidth="256.0" />
+            <TextField fx:id="mailStreet" layoutX="47.0" layoutY="2.0" prefHeight="17.0" prefWidth="256.0" />
             <Label layoutX="8.0" layoutY="33.0" text="City" />
-            <TextField layoutX="47.0" layoutY="30.0" prefHeight="17.0" prefWidth="135.0" />
+            <TextField fx:id="mailCity" layoutX="47.0" layoutY="30.0" prefHeight="17.0" prefWidth="135.0" />
             <Label layoutX="194.0" layoutY="33.0" text="State" />
-            <ComboBox layoutX="228.0" layoutY="30.0" prefWidth="150.0" />
+            <ComboBox fx:id="mailState" layoutX="228.0" layoutY="30.0" onMouseClicked="#mailStateClick" prefWidth="150.0" promptText="Select" />
             <Label layoutX="317.0" layoutY="6.0" text="Apt" />
-            <TextField layoutX="347.0" layoutY="2.0" prefHeight="17.0" prefWidth="91.0" />
+            <TextField fx:id="mailApt" layoutX="347.0" layoutY="2.0" prefHeight="17.0" prefWidth="91.0" />
             <Label layoutX="393.0" layoutY="34.0" text="Zip" />
-            <TextField layoutX="417.0" layoutY="30.0" prefHeight="25.0" prefWidth="116.0" />
+            <TextField fx:id="mailZip" layoutX="417.0" layoutY="30.0" prefHeight="25.0" prefWidth="116.0" />
          </children>
       </AnchorPane>
       <Label layoutX="14.0" layoutY="331.0" prefHeight="17.0" prefWidth="91.0" text="Mailing Address*" />
-      <CheckBox layoutX="20.0" layoutY="300.0" mnemonicParsing="false" text="Check here if address is same as mailing address" />
-      <AnchorPane layoutX="5.0" layoutY="394.0" prefHeight="61.0" prefWidth="644.0">
-         <children>
-            <Label layoutX="14.0" layoutY="5.0" text="Phone Number *" />
-            <Label layoutX="14.0" layoutY="37.0" text="Cell Phone Number *" />
-            <TextField layoutX="134.0" layoutY="1.0" />
-            <TextField layoutX="134.0" layoutY="33.0" />
-            <CheckBox layoutX="308.0" layoutY="5.0" mnemonicParsing="false" text="Check here if Phone Number is same as Cell phone number" />
-         </children>
-      </AnchorPane>
-      <Button fx:id="eduNextPage" layoutX="580.0" layoutY="494.0" mnemonicParsing="false" onAction="#switchToScene2" onMouseClicked="#eduNextPageButton" text="Next Page" />
+      <CheckBox fx:id="addSameAsMailAdd" layoutX="20.0" layoutY="300.0" mnemonicParsing="false" onAction="#sameAddressBox" text="Check here if address is same as mailing address" />
+      <AnchorPane layoutX="5.0" layoutY="394.0" prefHeight="61.0" prefWidth="644.0" />
+      <Button fx:id="scene1Next" layoutX="580.0" layoutY="494.0" mnemonicParsing="false" onAction="#switchToScene2" text="Next Page" />
       <ImageView fx:id="imageView" fitHeight="61.0" fitWidth="175.0" layoutX="476.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../QC_LOGO.jpg" />
          </image></ImageView>
       <Separator layoutX="-4.0" layoutY="228.0" prefHeight="8.0" prefWidth="663.0" />
+      <AnchorPane layoutX="10.0" layoutY="390.0" prefHeight="104.0" prefWidth="630.0">
+         <children>
+            <Label layoutY="52.0" text="Cell Phone Number *" />
+            <TextField fx:id="cellNum" layoutX="125.0" layoutY="48.0" />
+            <TextField fx:id="email" layoutX="125.0" layoutY="78.0" prefHeight="25.0" prefWidth="175.0" />
+            <Label layoutY="82.0" text="Email*" />
+            <Label />
+            <Label layoutY="21.0" text="Phone Number *" />
+            <TextField fx:id="phoneNum" layoutX="125.0" layoutY="17.0" />
+            <CheckBox fx:id="phoneNumAsCellPhone" layoutX="294.0" layoutY="21.0" mnemonicParsing="false" onAction="#copyPhoneNum" text="Check here if Phone Number is same as Cell phone number" />
+         </children>
+      </AnchorPane>
 
 
    </children>
