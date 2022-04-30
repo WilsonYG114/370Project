@@ -23,7 +23,8 @@ public class Scene1Controller {
                         ,confirmCUNYIDField,addStreetField,mailZipField
                         ,addCityField,addAptField,addZipField
                         ,mailStreetField,mailAptField,mailCityField
-                        ,emailField,phoneNumField,cellPhoneNumField;
+                        ,emailField,phoneNumField,cellPhoneNumField,UIDField;
+
     protected static LocalDate DOBField;
     protected static Object mailStateField,genderField,addStateField;
     protected static boolean AddSameAsMailAdd, phoneNumAsCell;
@@ -40,7 +41,8 @@ public class Scene1Controller {
             addStreet,addCity,addApt,addZip,
             mailStreet,mailApt,mailCity,mailZip,
             email,phoneNum,cellNum;
-
+    @FXML
+    Label UID;
     @FXML
     ComboBox genderBox, addState,mailState;
     @FXML
@@ -54,6 +56,7 @@ public class Scene1Controller {
     Stage scene2;
     Parent root;
     FXMLLoader loader;
+
     public void switchToScene2(ActionEvent event) throws IOException
     {
             if(fieldCheck() == true)
@@ -89,12 +92,6 @@ public class Scene1Controller {
         scene2Controller.setAttendQC(scene2Controller.getAttendQC());
     }
 
-
-
-
-
-
-
 // get all the text field and save them to a global variable
     public void getTextField()
     {
@@ -122,6 +119,7 @@ public class Scene1Controller {
         emailField = email.getText();
         phoneNumField = phoneNum.getText();
         cellPhoneNumField = cellNum.getText();
+        UIDField = UID.getText();
         setInfoBuilder();
 
     }
@@ -157,13 +155,12 @@ public class Scene1Controller {
         System.out.println(infoBuilder.getInfo());
         return infoBuilder.getInfo();
     }
-
+    LoginController displayUID = new LoginController();
     //field getter
     public String getFirstName()
     {
         return firstNameField;
     }
-
     public String getMiddleName()
     {
         return middleNameField;
@@ -184,7 +181,6 @@ public class Scene1Controller {
     {
         return confirmSSNField;
     }
-
     public String getCUNYID()
     {
         return CUNYIDField;
@@ -218,6 +214,8 @@ public class Scene1Controller {
     public String getPhoneNum(){return phoneNumField;}
     public String getCellNum(){return cellPhoneNumField;}
     public boolean getPhoneNumAsCell(){return phoneNumAsCell;}
+    public String getUID(){return displayUID.getUID();}
+
     //Field setter
     public void setFirstName(String text)
     {
@@ -275,7 +273,6 @@ public class Scene1Controller {
     {
         addZip.setText(text);
     }
-
     public void setMailStreet(String text)
     {
         mailStreet.setText(text);
@@ -310,6 +307,7 @@ public class Scene1Controller {
     {
         cellNum.setText(text);
     }
+    public void setUID(String text){UID.setText(text);}
 
     //ComboBox click event
     public void genderClick(MouseEvent mouseEvent) {

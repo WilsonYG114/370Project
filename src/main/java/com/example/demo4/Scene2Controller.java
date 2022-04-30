@@ -83,6 +83,7 @@ public class Scene2Controller {
         scene1Controller.setPhoneNum(scene1Controller.getPhoneNum());
         scene1Controller.setCellNum(scene1Controller.getCellNum());
         scene1Controller.setPhoneNumAsCell(scene1Controller.getPhoneNumAsCell());
+        scene1Controller.setUID(scene1Controller.getUID());
     }
 
 

@@ -75,7 +75,6 @@ public class InfoBuilder extends InfoBase{
      }
 
 
-
      public InfoBase getInfo()
      {
 
