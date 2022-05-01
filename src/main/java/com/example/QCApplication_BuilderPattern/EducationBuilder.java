@@ -1,4 +1,4 @@
-package com.example.demo4;
+package com.example.QCApplication_BuilderPattern;
 
 public class EducationBuilder extends EducationBase{
     public EducationBuilder setHSDip(Object HSDip)
@@ -74,7 +74,6 @@ public class EducationBuilder extends EducationBase{
                             ,attendCUNY,attendQC);
     }
 
-
     public class EDUInfo extends EducationBase
     {
         public EDUInfo(Object HSDip,String HSName,Object HSGradDate,Object equivalencyDip,Object equivalencyDipDate,Object EDUBeyondHS,String universityName,Object lastSemesterOfAttendance,Object dateOfGrad,Object attendCUNY,Object attendQC)
@@ -92,7 +91,6 @@ public class EducationBuilder extends EducationBase{
             this.attendQC = attendQC;
         }
     }
-
 
 
 }

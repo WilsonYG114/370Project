@@ -1,4 +1,4 @@
-package com.example.demo4;
+package com.example.QCApplication_BuilderPattern;
 
 import java.io.IOException;
 import javafx.application.Application;
@@ -18,7 +18,6 @@ public class Main extends Application {
         stage.setScene(scene);
         stage.show();
         stage.setResizable(false);
-
     }
 
     public static void main(String[] args) {

@@ -1,36 +1,30 @@
-package com.example.demo4;
-import java.util.Objects;
-public class InfoBuilder extends InfoBase{
+package com.example.QCApplication_BuilderPattern;
 
+public class InfoBuilder extends InfoBase{
      //must require a input
      public InfoBuilder setFirstName(String firstName) {
           this.firstName = firstName;
           return this;
      }
-
      //must require a input
      public InfoBuilder setLastName(String lastName) {
           this.lastName = lastName;
           return this;
      }
-
      public InfoBuilder setMiddleName(String middleName) {
           this.middleName = middleName;
           return this;
      }
-
      //must require a input
      public InfoBuilder setEmail(String email) {
           this.email = email;
           return this;
      }
-
      //must require a input
      public InfoBuilder setAddress(String address) {
           this.address = address;
           return this;
      }
-
      //can be same as address if same copy from address
      public InfoBuilder setMailAddress(String mailAddress) {
           this.mailAddress = mailAddress;
@@ -68,7 +62,6 @@ public class InfoBuilder extends InfoBase{
      }
 
      //must require a input
-     // 1 is male 2 is female 3 is other
      public InfoBuilder setGender(Object gender) {
           this.gender = gender;
           return this;

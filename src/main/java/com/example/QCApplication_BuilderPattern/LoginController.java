@@ -1,4 +1,4 @@
-package com.example.demo4;
+package com.example.QCApplication_BuilderPattern;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -7,12 +7,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -30,7 +28,9 @@ public class LoginController {
 
     @FXML
     TextField userIDInput,passwordInput;
+    @FXML
     Button loginButton;
+
     public void loadUserList()
     {
         loginDetail.put("123","abc");
@@ -74,7 +74,6 @@ public class LoginController {
             scene1.show();
             scene1Controller.setUID(UIDField);
         }
-
 
 
     }

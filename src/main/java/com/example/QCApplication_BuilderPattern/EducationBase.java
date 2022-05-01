@@ -1,6 +1,4 @@
-package com.example.demo4;
-
-import java.security.ProtectionDomain;
+package com.example.QCApplication_BuilderPattern;
 
 public class EducationBase {
     protected Object HSDip;

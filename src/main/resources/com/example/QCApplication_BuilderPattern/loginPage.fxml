@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="298.0" prefWidth="394.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.QCApplication_BuilderPattern.LoginController">
+   <children>
+      <Label layoutX="33.0" layoutY="125.0" text="User ID:" />
+      <Label layoutX="33.0" layoutY="169.0" text="Password:" />
+      <TextField fx:id="userIDInput" layoutX="125.0" layoutY="121.0" />
+      <TextField fx:id="passwordInput" layoutX="125.0" layoutY="165.0" />
+      <Button fx:id="loginButton" layoutX="228.0" layoutY="213.0" mnemonicParsing="false" onAction="#loginClick" text="Login" />
+      <Label layoutX="32.0" layoutY="74.0" text="Queens college admission system">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font></Label>
+      <ImageView fitHeight="55.0" fitWidth="141.0" layoutX="251.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../QC_LOGO.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

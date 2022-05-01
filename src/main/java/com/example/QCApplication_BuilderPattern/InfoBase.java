@@ -1,4 +1,4 @@
-package com.example.demo4;
+package com.example.QCApplication_BuilderPattern;
 
 public class InfoBase
 {

@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="663.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo4.Scene2Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="663.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.QCApplication_BuilderPattern.Scene2Controller">
    <children>
       <Button fx:id="scene2Prev" layoutX="480.0" layoutY="494.0" mnemonicParsing="false" onAction="#switchToScene1" text="Previous Page" />
       <Button fx:id="submitApplication" layoutX="580.0" layoutY="494.0" mnemonicParsing="false" onAction="#Submit" text="Submit" />
